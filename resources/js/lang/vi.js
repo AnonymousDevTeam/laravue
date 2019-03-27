@@ -4,7 +4,7 @@ export default {
     return: 'Trở về',
   },
   route: {
-    dashboard: 'Dashboard',
+    dashboard: 'Giao diện chính',
     introduction: 'Giới thiệu',
     documentation: 'Tài liệu',
     guide: 'Hướng dẫn',

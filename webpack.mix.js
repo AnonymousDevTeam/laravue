@@ -25,7 +25,6 @@ mix.webpackConfig({
     alias: {
       vue$: 'vue/dist/vue.esm.js',
       '@': path.join(__dirname, '/resources/js'),
-      '@core': path.join(__dirname, '/vendor/tuandm/laravue-core/src/resources/js'),
     },
   },
   module: {
