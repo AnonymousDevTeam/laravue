@@ -39,14 +39,14 @@
 
 <script>
 import LangSelect from '@/components/LangSelect';
-import { isEmailValid } from '@/utils/validate';
+import { validEmail } from '@/utils/validate';
 
 export default {
   name: 'Login',
   components: { LangSelect },
   data() {
     const validateEmail = (rule, value, callback) => {
-      if (!isEmailValid(value)) {
+      if (!validEmail(value)) {
         callback(new Error('Please enter the correct email'));
       } else {
         callback();

@@ -35,12 +35,12 @@ router.beforeEach((to, from, next) => {
         store.dispatch('GetInfo').then(res => { // Get user information
           const roles = [res.data.role];
           // next()
-          store.dispatch('GenerateRoutes', { roles }).then(() => { // Get all routers based on current role
-            router.addRoutes(store.getters.addRouters);
+          store.dispatch('GenerateRoutes', { roles }).then((accessRoutes) => { // Get all routers based on current role
+            router.addRoutes(accessRoutes);
             next({ ...to, replace: true }); // Just to make sure addRoutes is done ,set the replace: true so the navigation will not leave a history record
           });
         }).catch((err) => {
-          store.dispatch('FedLogOut').then(() => {
+          store.dispatch('LogOut').then(() => {
             Message.error(err || 'Verification failed, please login again');
             next({ path: '/' });
           });

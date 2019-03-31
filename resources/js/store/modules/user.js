@@ -91,18 +91,6 @@ const user = {
     },
 
     /**
-     * Logout processing
-     * @param {*} param0
-     */
-    FedLogOut({ commit }) {
-      return new Promise(resolve => {
-        commit('SET_TOKEN', '');
-        removeToken();
-        resolve();
-      });
-    },
-
-    /**
      * Change role of user
      * This method is to demo the directive v-permission.
      *

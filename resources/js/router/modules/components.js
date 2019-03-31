@@ -2,7 +2,7 @@
 
 import Layout from '@/views/layout/Layout';
 
-const componentsRouter = {
+const componentRoutes = {
   path: '/components',
   component: Layout,
   redirect: 'noredirect',
@@ -55,12 +55,42 @@ const componentsRouter = {
       meta: { title: 'sticky' },
     },
     {
+      path: 'back-to-top',
+      component: () => import('@/views/components-demo/BackToTop'),
+      name: 'BackToTopDemo',
+      meta: { title: 'backToTop' },
+    },
+    {
       path: 'count-to',
       component: () => import('@/views/components-demo/CountTo'),
       name: 'CountToDemo',
       meta: { title: 'countTo' },
     },
+    {
+      path: 'drag-dialog',
+      component: () => import('@/views/components-demo/DragDialog'),
+      name: 'DragDialogDemo',
+      meta: { title: 'dragDialog' },
+    },
+    {
+      path: 'drag-select',
+      component: () => import('@/views/components-demo/DragSelect'),
+      name: 'DragSelectDemo',
+      meta: { title: 'dragSelect' },
+    },
+    {
+      path: 'dnd-list',
+      component: () => import('@/views/components-demo/DndList'),
+      name: 'DndListDemo',
+      meta: { title: 'dndList' },
+    },
+    {
+      path: 'drag-kanban',
+      component: () => import('@/views/components-demo/DragKanban'),
+      name: 'DragKanbanDemo',
+      meta: { title: 'dragKanban' },
+    },
   ],
 };
 
-export default componentsRouter;
+export default componentRoutes;

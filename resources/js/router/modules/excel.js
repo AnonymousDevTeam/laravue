@@ -1,7 +1,7 @@
 /** When your routing table is too long, you can split it into small modules**/
 import Layout from '@/views/layout/Layout';
 
-const excelRouter = {
+const excelRoutes = {
   path: '/excel',
   component: Layout,
   redirect: '/excel/export-excel',
@@ -32,4 +32,4 @@ const excelRouter = {
   ],
 };
 
-export default excelRouter;
+export default excelRoutes;

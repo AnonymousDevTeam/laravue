@@ -1,6 +1,7 @@
 <template>
   <div class="upload-container">
-    <el-button :style="{background:color,borderColor:color}" icon="el-icon-upload" size="mini" type="primary" @click=" dialogVisible=true">Upload image
+    <el-button :style="{background:color,borderColor:color}" icon="el-icon-upload" size="mini" type="primary" @click=" dialogVisible=true">
+      Upload Image
     </el-button>
     <el-dialog :visible.sync="dialogVisible">
       <el-upload
@@ -12,7 +13,8 @@
         :before-upload="beforeUpload"
         class="editor-slide-upload"
         action="https://httpbin.org/post"
-        list-type="picture-card">
+        list-type="picture-card"
+      >
         <el-button size="small" type="primary">Click here to upload</el-button>
       </el-upload>
       <el-button @click="dialogVisible = false">Cancel</el-button>
@@ -94,7 +96,7 @@ export default {
 <style rel="stylesheet/scss" lang="scss" scoped>
 .editor-slide-upload {
   margin-bottom: 20px;
-  >>> .el-upload--picture-card {
+  /deep/ .el-upload--picture-card {
     width: 100%;
   }
 }

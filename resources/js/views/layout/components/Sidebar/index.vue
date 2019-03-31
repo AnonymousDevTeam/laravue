@@ -26,7 +26,7 @@ export default {
       'permission_routers',
     ]),
     routes() {
-      return this.$store.state.permission.routers;
+      return this.$store.state.permission.routes;
     },
     isCollapse() {
       return !this.sidebar.opened;
