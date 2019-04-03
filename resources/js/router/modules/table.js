@@ -40,12 +40,6 @@ const tableRoutes = {
       name: 'ComplexTable',
       meta: { title: 'complexTable' },
     },
-    {
-      path: 'dynamic-table',
-      component: () => import('@/views/table/DynamicTable/index'),
-      name: 'DynamicTable',
-      meta: { title: 'dynamicTable' },
-    },
   ],
 };
 export default tableRoutes;

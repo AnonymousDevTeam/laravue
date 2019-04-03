@@ -54,18 +54,30 @@ mix.webpackConfig({
 
 mix
   .js('resources/js/app.js', 'public/js')
-  // .extract(['vue', 'axios', 'vuex', 'vue-router', 'vue-i18n', 'element-ui']) // Issue of webpack:  https://github.com/JeffreyWay/laravel-mix/issues/1870
+  .extract([
+    'vue',
+    'axios',
+    'vuex',
+    'vue-router',
+    'vue-i18n',
+    'element-ui',
+    'echarts',
+  ])
   .options({
     processCssUrls: false,
   })
-  .sass('resources/js/styles/index.scss', 'public/css/app.css')
+  .sass('resources/js/styles/index.scss', 'public/css/app.css', {
+    implementation: require('node-sass'),
+  })
   .eslint();
 
 if (mix.inProduction()) {
   mix.version();
 } else {
   // Development settings
-  mix.sourceMaps().webpackConfig({
-    devtool: 'cheap-eval-source-map', // Fastest for development
-  });
+  mix;
+  // .sourceMaps()
+  // .webpackConfig({
+  //   devtool: 'cheap-eval-source-map', // Fastest for development
+  // });
 }
